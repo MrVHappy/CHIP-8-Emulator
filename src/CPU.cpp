@@ -4,7 +4,14 @@
 #include <array>     // std::array for fixed-size buffers (safer than raw C arrays)
 #include <iostream>  // debugging/console output
 #include <string>    // file paths
-// references: https://github.com/eshyong/Chip-8-Emulator/blob/master/chip8.c
+#include <bitset>
+#include <climits>
+
+// references: 
+// https://github.com/eshyong/Chip-8-Emulator/blob/master/chip8.c
+// https://en.cppreference.com/cpp/string/byte/memset
+// https://en.cppreference.com/cpp/string/byte/memcpy
+// https://stackoverflow.com/questions/1163624/memcpy-with-startindex
 class CPU{
     private:
         // 4K RAM 
@@ -64,7 +71,21 @@ class CPU{
     public:
         // constructor
         CPU(){
-            // Temp
+            // zeroing out memory, V, stack, display and keypad
+            std::memset(this->memory, 0, sizeof(this->memory));
+            std::memset(this->V,0,sizeof(this->V));
+            std::memset(this->stack,0,sizeof(this->stack));
+            std::memset(this->display,0,sizeof(this->display));
+            std::memset(this->keypad,0,sizeof(this->keypad));
+
+            // reset index_reg, stack_ptr, delay_timer and sound_timer to 0
+            this->index_reg = 0;
+            this->stack_ptr = 0;
+            this->delay_timer = 0;
+            this->sound_timer = 0;
+
+            // copy font set to memory starting at postion 0x50
+            memcpy(&this->memory[0x50], this->fontset, sizeof(this->fontset));
         }
         // load ROM to the emulator
         bool load_ROM(const std::string &path){
