@@ -6,12 +6,18 @@
 #include <string>    // file paths
 #include <bitset>
 #include <climits>
+#include <fstream>
+#include <utility>
+#include <vector>
 
 // references: 
 // https://github.com/eshyong/Chip-8-Emulator/blob/master/chip8.c
 // https://en.cppreference.com/cpp/string/byte/memset
 // https://en.cppreference.com/cpp/string/byte/memcpy
 // https://stackoverflow.com/questions/1163624/memcpy-with-startindex
+// https://austinmorlan.com/posts/chip8_emulator/#loading-a-rom
+// https://cplusplus.com/reference/istream/istream/seekg/
+
 class CPU{
     private:
         // 4K RAM 
@@ -88,9 +94,40 @@ class CPU{
             memcpy(&this->memory[0x50], this->fontset, sizeof(this->fontset));
         }
         // load ROM to the emulator
-        bool load_ROM(const std::string &path){
-            // temp return
-            return false;
+        bool load_ROM(const char* path){
+            // read the file and format it to binary at the end position
+            std::ifstream file(path,std::ios::binary | std::ios::ate);
+            // check if the file exsists
+            if(file.is_open()){
+                // checks to see if the file can be stored in RAM or not
+                std::streamsize file_size = file.tellg();
+                if(file_size > (4096 - START_ADRS)){
+                    // return false if the file size is too big
+                    return false;
+                }
+                // create a buffer of length of the ROM
+                std::vector<char> buffer(file_size);
+                file.seekg(0,std::ios::beg);
+                // read data as a block
+                file.read(buffer.data(),file_size);
+
+                // checks to see if the file isn't corrupted
+                if (file.fail()){
+                    return false;
+                }
+
+                // load ROM to memory
+                for (long i = 0; i <file_size; ++i){
+                    memory[START_ADRS + i] = buffer[i];
+                }
+
+                return true;
+            }
+            else{
+                // if it doesn't exist then return false
+                return false;
+            }
+            
         }
         // one FDE step
         void cycle(){
