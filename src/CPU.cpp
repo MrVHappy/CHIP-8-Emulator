@@ -144,135 +144,139 @@ class CPU{
         }
 
         // instruction set functions
-
+        // 00E0
         void clear(){
 
         }
-
+        // 00EE
         void exit_sub(){
 
         }
-
+        // 1NNN
         void jump(){
 
         }
-
+        // 2NNN
         void call_sub(){
 
         }
-
+        // 3XNN
         void not_equal_NN(){
 
         }
-
+        // 4XNN
         void equal_NN(){
 
         }
-
+        // 5XY0
         void VX_not_equal_VY(){
 
         }
-
+        // 6XNN
         void assign_VX(){
 
         }
-
+        // 7XNN
         void increment_VX(){
 
         }
-
+        // 8XY0
         void VX_copy_VY(){
 
         }
-
+        // 8XY1
         void VX_OR_VY(){
 
         }
-
+        // 8XY2
         void VX_AND_VY(){
 
         }
-        
+         // 8XY3       
         void VX_XOR_VY(){
 
         }
-
+        // 8XY4
         void VX_VY_carry(){
 
         }
-
+        // 8XY5
         void VX_VY_borrow(){
 
         }
-
-        void OLD_LEAST_SIGb(){
+        // 8XY6
+        void right_shift(){
 
         }
-
+        // 8XY7
         void VX_VY_0_on_borrow(){
 
         }
-
-        void OLD_MOST_SIGb(){
+        // 8XYE
+        void left_shift(){
 
         }
-
+        // 9XY0
         void VX_EQUAL_VY(){
 
         }
-
+        // ANNN
         void set_i(){
 
         }
-
+        // BNNN
         void jump_0_NNN(){
 
         }
+        // CXNN
+        void rand_VX_VY(){
 
+        }
+        // DXYN
         void sprite(){
 
         }
-
+        // EX9E
         void key_not_pressed(){
 
         }
-
+        // EXA1
         void key_pressed(){
 
         }
-
+        // FX07
         void VX_delay(){
 
         }
-
+        // FX0A
         void wait_for_key(){
 
         }
-
+        // FX15
         void delay_VX(){
 
         }
-
+        // FX18
         void buzzer_VX(){
 
         }
-
+        // FX1E
         void i_ADD_VX(){
 
         }
-
+        // FX29
         void i_HEX_VX(){
 
         }
-
+        // FX33
         void decode(){
 
         }
-
+        // FX55
         void save_VX(){
 
         }
-
+        // FX65
         void load_VX(){
 
         }
