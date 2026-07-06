@@ -18,11 +18,18 @@
 // https://austinmorlan.com/posts/chip8_emulator/#loading-a-rom
 // https://cplusplus.com/reference/istream/istream/seekg/
 // https://www.geeksforgeeks.org/cpp/function-pointer-to-member-function-in-cpp/
+// https://www.geeksforgeeks.org/cpp/cpp-bitwise-operators/
+
+
 
 class CPU{
     private:
         // 4K RAM 
         uint8_t memory[4096];
+
+        // flag
+        bool flag = false;
+
         // the start adress for the Program counter
         const uint16_t START_ADRS = 0x200;
         
@@ -146,79 +153,92 @@ class CPU{
         // instruction set functions
         // 00E0
         void clear(){
-
+            // clear display
+            for(int x = 0; x < 2048; x++){
+                display[x] = 0;
+            }
         }
         // 00EE
         void exit_sub(){
 
         }
         // 1NNN
-        void jump(){
-
+        void jump(uint16_t adrs){
+            this->Program_Counter = adrs;
         }
         // 2NNN
-        void call_sub(){
-
+        void call_sub(uint8_t x, uint8_t num){
+            
         }
         // 3XNN
-        void not_equal_NN(){
-
+        void not_equal_NN(uint8_t x, uint8_t num){
+            if (this->V[x] != num)
+                this->Program_Counter +=2;
         }
         // 4XNN
-        void equal_NN(){
-
+        void equal_NN(uint8_t x, uint8_t num){
+            if (this->V[x] == num)  
+                this->Program_Counter +=2;
         }
         // 5XY0
-        void VX_not_equal_VY(){
-
+        void VX_not_equal_VY(uint8_t x, uint8_t y){
+            if (this->V[x] != this->V[y])
+                this->Program_Counter +=2;
         }
         // 6XNN
-        void assign_VX(){
-
+        void assign_VX(uint8_t x, uint8_t num){
+            this->V[x] = num;
         }
         // 7XNN
-        void increment_VX(){
-
+        void increment_VX(uint8_t x, uint8_t num){
+            this->V[x] += num;
         }
         // 8XY0
-        void VX_copy_VY(){
-
+        void VX_copy_VY(uint8_t x, uint8_t y){
+            this->V[x] = this->V[y];
         }
         // 8XY1
-        void VX_OR_VY(){
-
+        void VX_OR_VY(uint8_t x, uint8_t y){
+            this->V[x] =  this->V[x] | this->V[y];
         }
         // 8XY2
-        void VX_AND_VY(){
-
+        void VX_AND_VY(uint8_t x, uint8_t y){
+            this->V[x] =  this->V[x] & this->V[y];
         }
          // 8XY3       
-        void VX_XOR_VY(){
-
+        void VX_XOR_VY(uint8_t x, uint8_t y){
+            this->V[x] =  this->V[x] ^ this->V[y];
         }
         // 8XY4
-        void VX_VY_carry(){
-
+        void VX_VY_carry(uint8_t x, uint8_t y){
+            uint16_t carry = this->V[x] + this->V[y];
+            if (carry > 255){
+                this->V[0xF] = 1;
+            }
+            else{
+                this->V[0xF] = 0;
+            }
         }
         // 8XY5
-        void VX_VY_borrow(){
-
+        void VX_VY_borrow(uint8_t x, uint8_t y){
+            this->V[x] -= this->V[y];
         }
         // 8XY6
-        void right_shift(){
+        void right_shift(uint8_t x, uint8_t y){
 
         }
         // 8XY7
-        void VX_VY_0_on_borrow(){
+        void VX_VY_0_on_borrow(uint8_t x, uint8_t y){
 
         }
         // 8XYE
-        void left_shift(){
+        void left_shift(uint8_t x, uint8_t y){
 
         }
         // 9XY0
-        void VX_EQUAL_VY(){
-
+        void VX_EQUAL_VY(uint8_t x, uint8_t y){
+            if (this->V[x] == this-> V[y])
+                this->Program_Counter +=2;
         }
         // ANNN
         void set_i(){
