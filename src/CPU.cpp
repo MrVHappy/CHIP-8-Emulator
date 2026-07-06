@@ -17,6 +17,7 @@
 // https://stackoverflow.com/questions/1163624/memcpy-with-startindex
 // https://austinmorlan.com/posts/chip8_emulator/#loading-a-rom
 // https://cplusplus.com/reference/istream/istream/seekg/
+// https://www.geeksforgeeks.org/cpp/function-pointer-to-member-function-in-cpp/
 
 class CPU{
     private:
@@ -105,7 +106,7 @@ class CPU{
                     // return false if the file size is too big
                     return false;
                 }
-                // create a buffer of length of the ROM
+                // create a buffer vector of length of the ROM
                 std::vector<char> buffer(file_size);
                 file.seekg(0,std::ios::beg);
                 // read data as a block
@@ -142,4 +143,137 @@ class CPU{
             return this->display;
         }
 
+        // instruction set functions
+
+        void clear(){
+
+        }
+
+        void exit_sub(){
+
+        }
+
+        void jump(){
+
+        }
+
+        void call_sub(){
+
+        }
+
+        void not_equal_NN(){
+
+        }
+
+        void equal_NN(){
+
+        }
+
+        void VX_not_equal_VY(){
+
+        }
+
+        void assign_VX(){
+
+        }
+
+        void increment_VX(){
+
+        }
+
+        void VX_copy_VY(){
+
+        }
+
+        void VX_OR_VY(){
+
+        }
+
+        void VX_AND_VY(){
+
+        }
+        
+        void VX_XOR_VY(){
+
+        }
+
+        void VX_VY_carry(){
+
+        }
+
+        void VX_VY_borrow(){
+
+        }
+
+        void OLD_LEAST_SIGb(){
+
+        }
+
+        void VX_VY_0_on_borrow(){
+
+        }
+
+        void OLD_MOST_SIGb(){
+
+        }
+
+        void VX_EQUAL_VY(){
+
+        }
+
+        void set_i(){
+
+        }
+
+        void jump_0_NNN(){
+
+        }
+
+        void sprite(){
+
+        }
+
+        void key_not_pressed(){
+
+        }
+
+        void key_pressed(){
+
+        }
+
+        void VX_delay(){
+
+        }
+
+        void wait_for_key(){
+
+        }
+
+        void delay_VX(){
+
+        }
+
+        void buzzer_VX(){
+
+        }
+
+        void i_ADD_VX(){
+
+        }
+
+        void i_HEX_VX(){
+
+        }
+
+        void decode(){
+
+        }
+
+        void save_VX(){
+
+        }
+
+        void load_VX(){
+
+        }
 };
