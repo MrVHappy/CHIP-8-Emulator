@@ -58,7 +58,7 @@ class CPU{
         uint8_t sound_timer;
 
         // used to display the screen at 64px:32px
-        uint8_t display[64*32];
+        uint32_t display[64*32];
 
         // CHIP-8 Controls:
         uint8_t keypad[16];
@@ -149,7 +149,7 @@ class CPU{
             // Temp
         }
         // read render
-        const uint8_t* get_Display() const{
+        const uint32_t* get_Display() const{
             return this->display;
         }
 
@@ -311,9 +311,36 @@ class CPU{
             this->V[x] = (rand() % 256) & num;
         }
         // DXYN
-        void draw(uint8_t x, uint8_t y, uint8_t num){
-            for(int i = index_reg; i < num; i++){
+        void draw(uint8_t x, uint8_t y, uint8_t height){
+            // get the x and y positions
+            uint8_t x_pos = this->V[x] % 64;
+            uint8_t y_pos = this->V[y] % 32;
+
+            // set register 0xF to 0
+            this->V[0xF] = 0;
+
+            for (unsigned int row = 0; row < height; ++row){
+                // assign a byte of memory based on the sum of the index and row
+                uint8_t sprite_byte = memory[index_reg + row];
                 
+                for(unsigned int col = 0; col < 8; ++col){
+                    
+                    // the size of the pixel and make sure to warp to the start
+                    uint8_t sprite_pixel = sprite_byte & (0x80u >> col);
+                    // the size of the screen
+                    uint32_t* screen_pixel = &display[(y_pos + row) * 64 + (x_pos + col)];
+
+                    // if sprite pixel is on
+                    if(sprite_pixel){
+                        // check for collison with screen pixel
+                        if(*screen_pixel == 0xFFFFFFFF){
+                            V[0xF] = 1;
+                        }
+
+                        // XOR pixel
+                        *screen_pixel ^= 0xFFFFFFFF;
+                    }
+                }
             }
         }
         // EX9E
