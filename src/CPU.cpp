@@ -352,23 +352,24 @@ class CPU{
 
         }
         // FX07
-        void VX_delay(){
-
+        void VX_delay(uint8_t x){
+            this->V[x] = this->delay_timer;
         }
         // FX0A
         void wait_for_key(){
 
         }
         // FX15
-        void delay_VX(){
-
+        void delay_VX(uint8_t x){
+            this->delay_timer = this->V[x];
         }
         // FX18
-        void buzzer_VX(){
-
+        void buzzer_VX(uint8_t x){
+            this->sound_timer = this->V[x];
         }
         // FX1E
-        void i_ADD_VX(){
+        void i_ADD_VX(uint8_t x){
+            this->index_reg += this->V[x];
 
         }
         // FX29
