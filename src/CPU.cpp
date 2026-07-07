@@ -9,6 +9,7 @@
 #include <fstream>
 #include <utility>
 #include <vector>
+#include <cstdlib>
 
 // references: 
 // https://github.com/eshyong/Chip-8-Emulator/blob/master/chip8.c
@@ -19,6 +20,8 @@
 // https://cplusplus.com/reference/istream/istream/seekg/
 // https://www.geeksforgeeks.org/cpp/function-pointer-to-member-function-in-cpp/
 // https://www.geeksforgeeks.org/cpp/cpp-bitwise-operators/
+// http://devernay.free.fr/hacks/chip8/C8TECH10.HTM#8xy4
+// https://www.geeksforgeeks.org/dsa/print-kth-least-significant-bit-number/
 
 
 
@@ -160,28 +163,40 @@ class CPU{
         }
         // 00EE
         void exit_sub(){
-
+            // decrement the stack pointer
+            this->stack_ptr--;
+            // get the assign the PC to the new stack address
+            this->Program_Counter = this->stack[this->stack_ptr];
         }
         // 1NNN
         void jump(uint16_t adrs){
+            // move PC to input address
             this->Program_Counter = adrs;
         }
         // 2NNN
-        void call_sub(uint8_t x, uint8_t num){
-            
+        void call_sub(uint16_t line){
+            // record the PC position to the stack
+            this->stack[this->stack_ptr] = this->Program_Counter;
+            // increment the stack pointer
+            this->stack_ptr++;
+            // update the PC
+            this->Program_Counter = line; 
         }
         // 3XNN
         void not_equal_NN(uint8_t x, uint8_t num){
+            // if the register X != to num then go to next instruction
             if (this->V[x] != num)
                 this->Program_Counter +=2;
         }
         // 4XNN
         void equal_NN(uint8_t x, uint8_t num){
+            // if the register X == to num then go to next instruction
             if (this->V[x] == num)  
                 this->Program_Counter +=2;
         }
         // 5XY0
         void VX_not_equal_VY(uint8_t x, uint8_t y){
+            // if the register X != to register Y then go to next instruction
             if (this->V[x] != this->V[y])
                 this->Program_Counter +=2;
         }
@@ -211,29 +226,72 @@ class CPU{
         }
         // 8XY4
         void VX_VY_carry(uint8_t x, uint8_t y){
+            // add register X and Y
             uint16_t carry = this->V[x] + this->V[y];
+            // check if the sum is > 255
             if (carry > 255){
+                // add carry
                 this->V[0xF] = 1;
             }
             else{
+                // don't add carry
                 this->V[0xF] = 0;
             }
+            // assign register X to sum
+            this->V[x] = carry;
         }
         // 8XY5
         void VX_VY_borrow(uint8_t x, uint8_t y){
+            // check if register X is >= to register Y
+            if (this->V[x] >= this->V[y]){
+                // add carry
+                V[0xF] = 1;
+            }
+            else{
+                // don't add carry
+                V[0xF] = 0;
+            }
+            // subtract register X by register Y
             this->V[x] -= this->V[y];
         }
         // 8XY6
         void right_shift(uint8_t x, uint8_t y){
-
+            // checks the least significant bit
+            if(this->V[x] & (1 << 0)){
+                // set V[0xF] to 1
+                this->V[0xF] = 1;
+            }
+            else{
+                // set V[0xF] to 0
+                this->V[0xF] = 0;
+            }
+            // then perform a right shift
+            this->V[x] = this->V[x] >> 1;
         }
         // 8XY7
         void VX_VY_0_on_borrow(uint8_t x, uint8_t y){
+           if(this->V[x] < this->V[y]){
+                this->V[0xF] = 1;
+           }
+           else{
+                this->V[0xF] = 0;
+           }
 
+           this->V[x] = this->V[y] - this->V[x];
         }
         // 8XYE
         void left_shift(uint8_t x, uint8_t y){
-
+            // checks the most significant bit
+            if(this->V[x] & (1 << 7)){
+                // set V[0xF] to 1
+                this->V[0xF] = 1;
+            }
+            else{
+                // set V[0xF] to 0
+                this->V[0xF] = 0;
+            }
+            // then perform a left shift
+            this->V[x] = this->V[x] << 1;
         }
         // 9XY0
         void VX_EQUAL_VY(uint8_t x, uint8_t y){
@@ -241,20 +299,22 @@ class CPU{
                 this->Program_Counter +=2;
         }
         // ANNN
-        void set_i(){
-
+        void set_index(uint16_t num){
+            this->index_reg = num;
         }
         // BNNN
-        void jump_0_NNN(){
-
+        void jump_0_NNN(uint16_t num){
+            this->Program_Counter = num + this->V[0];
         }
         // CXNN
-        void rand_VX_VY(){
-
+        void rand_VX_VY(uint8_t x, uint8_t num){
+            this->V[x] = (rand() % 256) & num;
         }
         // DXYN
-        void sprite(){
-
+        void draw(uint8_t x, uint8_t y, uint8_t num){
+            for(int i = index_reg; i < num; i++){
+                
+            }
         }
         // EX9E
         void key_not_pressed(){
