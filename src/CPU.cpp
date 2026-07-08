@@ -383,18 +383,24 @@ class CPU{
         }
         // FX29
         void i_HEX_VX(uint8_t x){
-
+            this->index_reg = 0x50 + (this->V[x] * 5);
         }
         // FX33
-        void decode(){
-
+        void decode(uint8_t x){
+            this->memory[this->index_reg] = this->V[x] / 100;
+            this->memory[this->index_reg + 1] = (this->V[x] % 100 / 10);
+            this->memory[this->index_reg + 2] = this->V[x] % 10;
         }
         // FX55
-        void save_VX(){
-
+        void save_VX(uint8_t x){
+            for (int i = 0; i <= x; i++){
+                this->memory[index_reg + i] = this->V[i];
+            }
         }
         // FX65
-        void load_VX(){
-
+        void load_VX(uint8_t x){
+            for (int i = 0; i <= x; i++){
+                this->V[i] = this->memory[index_reg + i];
+            }
         }
 };
