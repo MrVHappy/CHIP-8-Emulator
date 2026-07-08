@@ -270,7 +270,7 @@ class CPU{
         }
         // 8XY7
         void VX_VY_0_on_borrow(uint8_t x, uint8_t y){
-           if(this->V[x] < this->V[y]){
+           if(this->V[x] <= this->V[y]){
                 this->V[0xF] = 1;
            }
            else{
@@ -344,20 +344,30 @@ class CPU{
             }
         }
         // EX9E
-        void key_not_pressed(){
-
+        void key_pressed(uint8_t x){
+            if(this->keypad[this->V[x]] >= 1){
+                this->Program_Counter += 2;
+            }
         }
         // EXA1
-        void key_pressed(){
-
+        void key_not_pressed(uint8_t x){
+            if(this->keypad[this->V[x]] == 0){
+                this->Program_Counter += 2;
+            }
         }
         // FX07
         void VX_delay(uint8_t x){
             this->V[x] = this->delay_timer;
         }
         // FX0A
-        void wait_for_key(){
-
+        void wait_for_key(uint8_t x){
+            for (int i = 0; i < 16; i++){
+                if (this->keypad[i] != 0){
+                    this->V[x] = i;
+                    return;
+                }
+            }
+            this->Program_Counter-= 2;
         }
         // FX15
         void delay_VX(uint8_t x){
@@ -370,10 +380,9 @@ class CPU{
         // FX1E
         void i_ADD_VX(uint8_t x){
             this->index_reg += this->V[x];
-
         }
         // FX29
-        void i_HEX_VX(){
+        void i_HEX_VX(uint8_t x){
 
         }
         // FX33
