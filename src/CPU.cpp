@@ -10,6 +10,7 @@
 #include <utility>
 #include <vector>
 #include <cstdlib>
+#include <map>
 
 // references: 
 // https://github.com/eshyong/Chip-8-Emulator/blob/master/chip8.c
@@ -29,9 +30,6 @@ class CPU{
     private:
         // 4K RAM 
         uint8_t memory[4096];
-
-        // flag
-        bool flag = false;
 
         // the start adress for the Program counter
         const uint16_t START_ADRS = 0x200;
@@ -88,6 +86,44 @@ class CPU{
             0xE0, 0x90, 0x90, 0x90, 0xE0,		// D
             0xF0, 0x80, 0xF0, 0x80, 0xF0,		// E
             0xF0, 0x80, 0xF0, 0x80, 0x80		// F
+        };
+
+        // Map of function pointers for each instruction set:
+        std::map<uint16_t, void(CPU::*)()> instruction_set = {
+            {0x00E0, &CPU::clear}, // 1
+            {0x00EE, &CPU::exit_sub}, // 2
+            {0x1000, &CPU::jump}, // 3
+            {0x2000, &CPU::call_sub}, // 4
+            {0x3000, &CPU::not_equal_NN}, // 5
+            {0x4000, &CPU::equal_NN}, // 6
+            {0x5000, &CPU::VX_not_equal_VY}, // 7
+            {0x6000, &CPU::assign_VX}, // 8
+            {0x7000, &CPU::increment_VX}, // 9
+            {0x8000, &CPU::VX_copy_VY}, // 10
+            {0x8001, &CPU::VX_OR_VY}, // 11
+            {0x8002, &CPU::VX_AND_VY}, // 12
+            {0x8003, &CPU::VX_XOR_VY}, // 13
+            {0x8004, &CPU::VX_VY_carry}, // 14
+            {0x8005, &CPU::VX_VY_borrow}, // 15
+            {0x8006, &CPU::right_shift}, // 16
+            {0x8007, &CPU::VX_VY_0_on_borrow}, // 17
+            {0x800E, &CPU::left_shift}, // 18
+            {0x9000, &CPU::VX_EQUAL_VY}, // 19
+            {0xA000, &CPU::set_index}, // 20
+            {0xB000, &CPU::jump_0_NNN}, // 21
+            {0xC000, &CPU::rand_VX_VY}, // 22
+            {0xD000, &CPU::draw}, // 23
+            {0xE00E, &CPU::key_pressed}, // 24
+            {0xE001, &CPU::key_not_pressed}, // 25
+            {0xF007, &CPU::VX_delay}, // 26
+            {0xF00A, &CPU::wait_for_key}, // 27
+            {0xF015, &CPU::delay_VX}, // 28
+            {0xF018, &CPU::buzzer_VX}, // 29
+            {0xF01E, &CPU::i_ADD_VX}, // 30
+            {0xF029, &CPU::i_HEX_VX}, // 31
+            {0xF033, &CPU::decode}, // 32
+            {0xF055, &CPU::save_VX}, // 33
+            {0xF065, &CPU::load_VX} // 34
         };
     public:
         // constructor
@@ -159,8 +195,8 @@ class CPU{
             // decoding the opcode
             this->opcode_x = (opcode & 0x0F00) >> 8;
             this->opcode_y = (opcode & 0x00F0) >> 4;
-            this->opcode_nnn = (opcode & 0x0FFF);
-            this->opcode_nn = (opcode & 0x00FF);
+            this->opcode_nnn = opcode & 0x0FFF;
+            this->opcode_nn = opcode & 0x00FF;
             this->opcode_n = opcode & 0x000F;
 
         }
