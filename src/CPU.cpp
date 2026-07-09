@@ -146,7 +146,23 @@ class CPU{
         }
         // one FDE step
         void cycle(){
-            // Temp
+            // Fetch instruction
+            uint8_t high_byte = this->memory[this->Program_Counter];
+            uint8_t low_byte = this->memory[this->Program_Counter + 1];
+
+            // combine the bytes together
+            uint16_t opcode = (high_byte << 8) | low_byte;
+
+            // update the PC
+            this->Program_Counter += 2;
+
+            // decoding the opcode
+            this->opcode_x = (opcode & 0x0F00) >> 8;
+            this->opcode_y = (opcode & 0x00F0) >> 4;
+            this->opcode_nnn = (opcode & 0x0FFF);
+            this->opcode_nn = (opcode & 0x00FF);
+            this->opcode_n = opcode & 0x000F;
+
         }
         // decrement delay/sound at 60Hz
         void tick_timers(){
