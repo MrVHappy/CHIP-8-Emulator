@@ -63,6 +63,10 @@ class CPU{
         // CHIP-8 Controls:
         uint8_t keypad[16];
 
+        // opcode parameters:
+        uint8_t opcode_x, opcode_y, opcode_nn, opcode_n;
+        uint16_t opcode_nnn;
+
         // determines the font size of the font set
         static constexpr int FONTSET_SIZE = 80;
 
@@ -169,65 +173,65 @@ class CPU{
             this->Program_Counter = this->stack[this->stack_ptr];
         }
         // 1NNN
-        void jump(uint16_t adrs){
-            // move PC to input address
-            this->Program_Counter = adrs;
+        void jump(){
+            // move PC to input address (opcode_nnn)
+            this->Program_Counter = this->opcode_nnn;
         }
         // 2NNN
-        void call_sub(uint16_t line){
+        void call_sub(){
             // record the PC position to the stack
             this->stack[this->stack_ptr] = this->Program_Counter;
             // increment the stack pointer
             this->stack_ptr++;
-            // update the PC
-            this->Program_Counter = line; 
+            // update the PC at line stored in opcode_nnn
+            this->Program_Counter = this->opcode_nnn; 
         }
         // 3XNN
-        void not_equal_NN(uint8_t x, uint8_t num){
+        void not_equal_NN(){
             // if the register X != to num then go to next instruction
-            if (this->V[x] != num)
+            if (this->V[this->opcode_x] != opcode_nn)
                 this->Program_Counter +=2;
         }
         // 4XNN
-        void equal_NN(uint8_t x, uint8_t num){
-            // if the register X == to num then go to next instruction
-            if (this->V[x] == num)  
+        void equal_NN(){
+            // if the register X == to opcode_nn then go to next instruction
+            if (this->V[this->opcode_x] == opcode_nn)  
                 this->Program_Counter +=2;
         }
         // 5XY0
-        void VX_not_equal_VY(uint8_t x, uint8_t y){
+        void VX_not_equal_VY(){
             // if the register X != to register Y then go to next instruction
-            if (this->V[x] != this->V[y])
+            if (this->V[this->opcode_x] != this->V[this->opcode_y])
                 this->Program_Counter +=2;
         }
         // 6XNN
-        void assign_VX(uint8_t x, uint8_t num){
-            this->V[x] = num;
+        void assign_VX(){
+            this->V[this->opcode_x] = this->opcode_nn;
         }
         // 7XNN
-        void increment_VX(uint8_t x, uint8_t num){
-            this->V[x] += num;
+        void increment_VX(){
+            this->V[this->opcode_x] += this->opcode_nn;
         }
         // 8XY0
-        void VX_copy_VY(uint8_t x, uint8_t y){
-            this->V[x] = this->V[y];
+        void VX_copy_VY(){
+            this->V[this->opcode_x] = this->V[this->opcode_y];
         }
         // 8XY1
-        void VX_OR_VY(uint8_t x, uint8_t y){
-            this->V[x] =  this->V[x] | this->V[y];
+        void VX_OR_VY(){
+            this->V[this->opcode_x] =  this->V[this->opcode_x] | this->V[this->opcode_y];
         }
         // 8XY2
-        void VX_AND_VY(uint8_t x, uint8_t y){
-            this->V[x] =  this->V[x] & this->V[y];
+        void VX_AND_VY(){
+            this->V[this->opcode_x] =  this->V[this->opcode_x] & this->V[this->opcode_y];
         }
          // 8XY3       
-        void VX_XOR_VY(uint8_t x, uint8_t y){
-            this->V[x] =  this->V[x] ^ this->V[y];
+        void VX_XOR_VY(){
+            this->V[this->opcode_x] =  this->V[this->opcode_x] ^ this->V[this->opcode_y];
         }
         // 8XY4
-        void VX_VY_carry(uint8_t x, uint8_t y){
+        void VX_VY_carry(){
             // add register X and Y
-            uint16_t carry = this->V[x] + this->V[y];
+            uint16_t carry = this->V[this->opcode_x] + this->V[this->opcode_y];
             // check if the sum is > 255
             if (carry > 255){
                 // add carry
@@ -238,12 +242,12 @@ class CPU{
                 this->V[0xF] = 0;
             }
             // assign register X to sum
-            this->V[x] = carry;
+            this->V[this->opcode_x] = carry;
         }
         // 8XY5
-        void VX_VY_borrow(uint8_t x, uint8_t y){
+        void VX_VY_borrow(){
             // check if register X is >= to register Y
-            if (this->V[x] >= this->V[y]){
+            if (this->V[this->opcode_x] >= this->V[this->opcode_y]){
                 // add carry
                 V[0xF] = 1;
             }
@@ -252,12 +256,12 @@ class CPU{
                 V[0xF] = 0;
             }
             // subtract register X by register Y
-            this->V[x] -= this->V[y];
+            this->V[this->opcode_x] -= this->V[this->opcode_y];
         }
         // 8XY6
-        void right_shift(uint8_t x, uint8_t y){
+        void right_shift(){
             // checks the least significant bit
-            if(this->V[x] & (1 << 0)){
+            if(this->V[this->opcode_x] & (1 << 0)){
                 // set V[0xF] to 1
                 this->V[0xF] = 1;
             }
@@ -266,23 +270,23 @@ class CPU{
                 this->V[0xF] = 0;
             }
             // then perform a right shift
-            this->V[x] = this->V[x] >> 1;
+            this->V[this->opcode_x] = this->V[this->opcode_x] >> 1;
         }
         // 8XY7
-        void VX_VY_0_on_borrow(uint8_t x, uint8_t y){
-           if(this->V[x] <= this->V[y]){
+        void VX_VY_0_on_borrow(){
+           if(this->V[this->opcode_x] <= this->V[this->opcode_y]){
                 this->V[0xF] = 1;
            }
            else{
                 this->V[0xF] = 0;
            }
 
-           this->V[x] = this->V[y] - this->V[x];
+           this->V[this->opcode_x] = this->V[this->opcode_y] - this->V[this->opcode_x];
         }
         // 8XYE
-        void left_shift(uint8_t x, uint8_t y){
+        void left_shift(){
             // checks the most significant bit
-            if(this->V[x] & (1 << 7)){
+            if(this->V[this->opcode_x] & (1 << 7)){
                 // set V[0xF] to 1
                 this->V[0xF] = 1;
             }
@@ -291,35 +295,35 @@ class CPU{
                 this->V[0xF] = 0;
             }
             // then perform a left shift
-            this->V[x] = this->V[x] << 1;
+            this->V[this->opcode_x] = this->V[this->opcode_x] << 1;
         }
         // 9XY0
-        void VX_EQUAL_VY(uint8_t x, uint8_t y){
-            if (this->V[x] == this-> V[y])
+        void VX_EQUAL_VY(){
+            if (this->V[this->opcode_x] == this-> V[this->opcode_y])
                 this->Program_Counter +=2;
         }
         // ANNN
-        void set_index(uint16_t num){
-            this->index_reg = num;
+        void set_index(){
+            this->index_reg = this->opcode_nnn;
         }
         // BNNN
-        void jump_0_NNN(uint16_t num){
-            this->Program_Counter = num + this->V[0];
+        void jump_0_NNN(){
+            this->Program_Counter = this->opcode_nnn + this->V[0];
         }
         // CXNN
-        void rand_VX_VY(uint8_t x, uint8_t num){
-            this->V[x] = (rand() % 256) & num;
+        void rand_VX_VY(){
+            this->V[this->opcode_x] = (rand() % 256) & this->opcode_nn;
         }
         // DXYN
-        void draw(uint8_t x, uint8_t y, uint8_t height){
+        void draw(){
             // get the x and y positions
-            uint8_t x_pos = this->V[x] % 64;
-            uint8_t y_pos = this->V[y] % 32;
+            uint8_t x_pos = this->V[this->opcode_x] % 64;
+            uint8_t y_pos = this->V[this->opcode_y] % 32;
 
             // set register 0xF to 0
             this->V[0xF] = 0;
 
-            for (unsigned int row = 0; row < height; ++row){
+            for (unsigned int row = 0; row < this->opcode_n; ++row){
                 // assign a byte of memory based on the sum of the index and row
                 uint8_t sprite_byte = memory[index_reg + row];
                 
@@ -344,62 +348,62 @@ class CPU{
             }
         }
         // EX9E
-        void key_pressed(uint8_t x){
-            if(this->keypad[this->V[x]] >= 1){
+        void key_pressed(){
+            if(this->keypad[this->V[this->opcode_x]] >= 1){
                 this->Program_Counter += 2;
             }
         }
         // EXA1
-        void key_not_pressed(uint8_t x){
-            if(this->keypad[this->V[x]] == 0){
+        void key_not_pressed(){
+            if(this->keypad[this->V[this->opcode_x]] == 0){
                 this->Program_Counter += 2;
             }
         }
         // FX07
-        void VX_delay(uint8_t x){
-            this->V[x] = this->delay_timer;
+        void VX_delay(){
+            this->V[this->opcode_x] = this->delay_timer;
         }
         // FX0A
-        void wait_for_key(uint8_t x){
+        void wait_for_key(){
             for (int i = 0; i < 16; i++){
                 if (this->keypad[i] != 0){
-                    this->V[x] = i;
+                    this->V[this->opcode_x] = i;
                     return;
                 }
             }
             this->Program_Counter-= 2;
         }
         // FX15
-        void delay_VX(uint8_t x){
-            this->delay_timer = this->V[x];
+        void delay_VX(){
+            this->delay_timer = this->V[this->opcode_x];
         }
         // FX18
-        void buzzer_VX(uint8_t x){
-            this->sound_timer = this->V[x];
+        void buzzer_VX(){
+            this->sound_timer = this->V[this->opcode_x];
         }
         // FX1E
-        void i_ADD_VX(uint8_t x){
-            this->index_reg += this->V[x];
+        void i_ADD_VX(){
+            this->index_reg += this->V[this->opcode_x];
         }
         // FX29
-        void i_HEX_VX(uint8_t x){
-            this->index_reg = 0x50 + (this->V[x] * 5);
+        void i_HEX_VX(){
+            this->index_reg = 0x50 + (this->V[this->opcode_x] * 5);
         }
         // FX33
-        void decode(uint8_t x){
-            this->memory[this->index_reg] = this->V[x] / 100;
-            this->memory[this->index_reg + 1] = (this->V[x] % 100 / 10);
-            this->memory[this->index_reg + 2] = this->V[x] % 10;
+        void decode(){
+            this->memory[this->index_reg] = this->V[this->opcode_x] / 100;
+            this->memory[this->index_reg + 1] = (this->V[this->opcode_x] % 100 / 10);
+            this->memory[this->index_reg + 2] = this->V[this->opcode_x] % 10;
         }
         // FX55
-        void save_VX(uint8_t x){
-            for (int i = 0; i <= x; i++){
+        void save_VX(){
+            for (int i = 0; i <= this->opcode_x; i++){
                 this->memory[index_reg + i] = this->V[i];
             }
         }
         // FX65
-        void load_VX(uint8_t x){
-            for (int i = 0; i <= x; i++){
+        void load_VX(){
+            for (int i = 0; i <= this->opcode_x; i++){
                 this->V[i] = this->memory[index_reg + i];
             }
         }
