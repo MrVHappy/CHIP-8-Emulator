@@ -90,8 +90,8 @@ class CPU{
 
         // Map of function pointers for each instruction set:
         std::map<uint16_t, void(CPU::*)()> instruction_set = {
-            {0x00E0, &CPU::clear}, // 1
-            {0x00EE, &CPU::exit_sub}, // 2
+            {0x0000, &CPU::clear}, // 1
+            {0x000E, &CPU::exit_sub}, // 2
             {0x1000, &CPU::jump}, // 3
             {0x2000, &CPU::call_sub}, // 4
             {0x3000, &CPU::not_equal_NN}, // 5
@@ -182,7 +182,7 @@ class CPU{
         }
         // one FDE step
         void cycle(){
-            // Fetch instruction
+            // Fetch instruction:
             uint8_t high_byte = this->memory[this->Program_Counter];
             uint8_t low_byte = this->memory[this->Program_Counter + 1];
 
@@ -192,12 +192,30 @@ class CPU{
             // update the PC
             this->Program_Counter += 2;
 
-            // decoding the opcode
+            // Decoding the opcode:
             this->opcode_x = (opcode & 0x0F00) >> 8;
             this->opcode_y = (opcode & 0x00F0) >> 4;
             this->opcode_nnn = opcode & 0x0FFF;
             this->opcode_nn = opcode & 0x00FF;
             this->opcode_n = opcode & 0x000F;
+
+            // holds the first nibble of the opcode
+            uint16_t opcode_family = opcode & 0xF000;
+
+            // checks for ambiguous opcode families
+            if ((opcode_family == 0x0000) || (opcode_family == 0x8000) || (opcode_family == 0xE000)){
+                // adds the end nibble
+                opcode_family = opcode_family | opcode_n;
+            }
+            else if (opcode_family == 0xF000){
+                // adds the end byte
+                opcode_family = opcode_family | opcode_nn;
+            }
+            // Execute:
+            if (auto execute = this->instruction_set.find(opcode_family); execute != this->instruction_set.end()){
+                (this->*execute->second)();
+            }
+                
 
         }
         // decrement delay/sound at 60Hz
