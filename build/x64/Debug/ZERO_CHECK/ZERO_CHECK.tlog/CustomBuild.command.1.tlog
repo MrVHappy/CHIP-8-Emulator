@@ -1,0 +1,10 @@
+^C:\USERS\SEBASTIAN\ONEDRIVE\DOCUMENTS\GITHUB\CHIP 8 EMU\BUILD\CMAKEFILES\232BC9A96231E2EE2A150E353941B84E\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU" "-BC:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CHIP8Emulator.slnx"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

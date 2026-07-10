@@ -1,6 +1,8 @@
 #include "CPU.cpp"
 
 int main(int argc, char*argv[]){
+    // Cycles per frame:
+    const int CYCLES_PER_FRAME = 500 / 60;
     // creates CPU class for emulator
     CPU chip8 = CPU();
     // check if the user has send the ROM as an arg
@@ -14,7 +16,22 @@ int main(int argc, char*argv[]){
     else{
         // display error message
         std::cerr << "No ROM preloaded" << std::endl;
+        // TEMP
+        return 1;
     }
+    bool running = true;
+    while(running){
+        // perform the FDE cycle
+        for(int i = 0; i < CYCLES_PER_FRAME; i++){
+            chip8.cycle();
+        }
+
+        // update timers
+        chip8.tick_timers();
+
+        // render display
+    }
+
     
     return 0;
 }

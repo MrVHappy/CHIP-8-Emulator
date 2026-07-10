@@ -1,0 +1,3 @@
+C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/chip8.dir
+C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/ZERO_CHECK.dir
