@@ -8,7 +8,7 @@ int main(int argc, char*argv[]){
         // load the ROM
         if(!chip8.load_ROM(argv[1])){
             std::cerr << "ERROR:\t failed to load ROM" << std::endl;
-            
+            return 1;
         }
     }
     else{
