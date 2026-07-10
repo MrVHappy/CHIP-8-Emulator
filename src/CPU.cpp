@@ -220,7 +220,12 @@ class CPU{
         }
         // decrement delay/sound at 60Hz
         void tick_timers(){
-            // Temp
+            if(this->delay_timer > 0){
+                this->delay_timer--;
+            }
+            if(this->sound_timer > 0){
+                this->sound_timer--;
+            }
         }
         // read render
         const uint32_t* get_Display() const{
@@ -319,11 +324,11 @@ class CPU{
             // check if register X is >= to register Y
             if (this->V[this->opcode_x] >= this->V[this->opcode_y]){
                 // add carry
-                V[0xF] = 1;
+                this->V[0xF] = 1;
             }
             else{
                 // don't add carry
-                V[0xF] = 0;
+                this->V[0xF] = 0;
             }
             // subtract register X by register Y
             this->V[this->opcode_x] -= this->V[this->opcode_y];
@@ -395,20 +400,20 @@ class CPU{
 
             for (unsigned int row = 0; row < this->opcode_n; ++row){
                 // assign a byte of memory based on the sum of the index and row
-                uint8_t sprite_byte = memory[index_reg + row];
+                uint8_t sprite_byte = this->memory[index_reg + row];
                 
                 for(unsigned int col = 0; col < 8; ++col){
                     
                     // the size of the pixel and make sure to warp to the start
                     uint8_t sprite_pixel = sprite_byte & (0x80u >> col);
                     // the size of the screen
-                    uint32_t* screen_pixel = &display[(y_pos + row) * 64 + (x_pos + col)];
+                    uint32_t* screen_pixel = &this->display[(y_pos + row) * 64 + (x_pos + col)];
 
                     // if sprite pixel is on
                     if(sprite_pixel){
                         // check for collison with screen pixel
                         if(*screen_pixel == 0xFFFFFFFF){
-                            V[0xF] = 1;
+                            this->V[0xF] = 1;
                         }
 
                         // XOR pixel
