@@ -5,7 +5,7 @@
 // https://www.libsdl.org/release/SDL-1.2.15/docs/html/guidebasicsinit.html
 // https://thenumb.at/cpp-course/sdl2/01/01.html
 // https://wiki.libsdl.org/SDL2/SDL_EventType
-// 
+// https://lazyfoo.net/tutorials/SDL/07_texture_loading_and_rendering/index.php
 // 
 // 
 // 
@@ -37,17 +37,18 @@ int main(int argc, char*argv[]){
         system("pause");
         return 1;
     }
-    // get the surface from the window
-    SDL_Surface *surface = SDL_GetWindowSurface(window);
 
-    // check if surface has been created:
-    if(!surface){
-        std::cerr << "ERROR:\t " << SDL_GetError() << std::endl;
+    // get renderer from the window
+    SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+    
+    // check if renderer has been created:
+    if(renderer == NULL){
+        // display error message
+        std::cerr << "ERROR:\t failed to create renderer" << std::endl;
         // End application
         system("pause");
         return 1;
     }
-
     // Cycles per frame:
     const int CYCLES_PER_FRAME = 500 / 60;
     // creates CPU class for emulator
@@ -67,12 +68,15 @@ int main(int argc, char*argv[]){
         return 1;
     }
     bool running = true;
+    // used to check if the window is open
     SDL_Event event;
     std::cout<< "Loading ROM:" << std::endl;
     SDL_UpdateWindowSurface(window);
     while(running){
         while(SDL_PollEvent(&event)){
+            // checks if the user has closed the window 
            if(event.type == SDL_QUIT){
+                // stop the application
                 running = false;
            }
             
