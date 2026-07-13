@@ -6,6 +6,7 @@
 // https://thenumb.at/cpp-course/sdl2/01/01.html
 // https://wiki.libsdl.org/SDL2/SDL_EventType
 // https://lazyfoo.net/tutorials/SDL/07_texture_loading_and_rendering/index.php
+// https://thenumb.at/cpp-course/sdl2/05/05.html
 // 
 // 
 // 
@@ -13,8 +14,12 @@
 // 
 // 
 // 
-// 
-// 
+
+// display the screen 
+void display (SDL_Renderer *renderer, SDL_Texture *texture, CPU &chip8){
+
+}
+
 
 int main(int argc, char*argv[]){
     // define SDL video and audio
@@ -49,6 +54,19 @@ int main(int argc, char*argv[]){
         system("pause");
         return 1;
     }
+
+    // get texture from renderer
+    SDL_Texture *texture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_STATIC, 64,32);
+
+    // check if texture has been created:
+    if(!texture){
+        // display error message
+        std::cerr << "ERROR:\t failed to create texture" << std::endl;
+        // End application
+        system("pause");
+        return 1;
+    }
+    
     // Cycles per frame:
     const int CYCLES_PER_FRAME = 500 / 60;
     // creates CPU class for emulator
@@ -71,7 +89,6 @@ int main(int argc, char*argv[]){
     // used to check if the window is open
     SDL_Event event;
     std::cout<< "Loading ROM:" << std::endl;
-    SDL_UpdateWindowSurface(window);
     while(running){
         while(SDL_PollEvent(&event)){
             // checks if the user has closed the window 
