@@ -55,12 +55,30 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Muse Hub\\lib"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Muse Hub\\lib"
         - "C:\\Users\\Sebastian\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\Sebastian\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Users\\Sebastian\\AppData\\Local\\Python\\bin"
         - "C:\\Users\\Sebastian\\AppData\\Local\\GitHubDesktop\\bin"
         - "C:\\Users\\Sebastian\\.dotnet\\tools"
         - "C:\\Users\\Sebastian\\AppData\\Local\\Muse Hub\\lib"
+        - "C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\vcpkg"
       CMAKE_FIND_ROOT_PATH: "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug;C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows"
   -
     kind: "message-v1"
@@ -78,7 +96,7 @@ events:
       The output was:
       0
       MSBuild version 18.6.3+84d3e95b4 for .NET Framework
-      Build started 10/07/2026 14:24:42.
+      Build started 13/07/2026 12:19:15.
       
       Project "C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\4.3.3\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
       PrepareForBuild:
@@ -113,7 +131,7 @@ events:
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:00.62
+      Time Elapsed 00:00:00.58
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -164,6 +182,7 @@ events:
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/AppData/Local/GitHubDesktop/bin/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/.dotnet/tools/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/AppData/Local/Muse Hub/lib/"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Windows/System32/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Windows/"
@@ -183,6 +202,7 @@ events:
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/AppData/Local/GitHubDesktop/bin/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/.dotnet/tools/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/AppData/Local/Muse Hub/lib/"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/"
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
       - "C:/Windows/System32/"
       - "C:/Windows/"
@@ -202,6 +222,7 @@ events:
       - "C:/Users/Sebastian/AppData/Local/GitHubDesktop/bin/"
       - "C:/Users/Sebastian/.dotnet/tools/"
       - "C:/Users/Sebastian/AppData/Local/Muse Hub/lib/"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/"
     searched_directories:
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/link.com"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/link.exe"
@@ -260,6 +281,9 @@ events:
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/AppData/Local/Muse Hub/lib/link.com"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/AppData/Local/Muse Hub/lib/link.exe"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/AppData/Local/Muse Hub/lib/link"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/link.com"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/link.exe"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/link"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/link.com"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/link.exe"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/link"
@@ -317,6 +341,9 @@ events:
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/AppData/Local/Muse Hub/lib/link.com"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/AppData/Local/Muse Hub/lib/link.exe"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/AppData/Local/Muse Hub/lib/link"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/link.com"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/link.exe"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/link"
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/link.com"
     found: "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/link.exe"
     search_context:
@@ -343,12 +370,30 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Muse Hub\\lib"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Muse Hub\\lib"
         - "C:\\Users\\Sebastian\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\Sebastian\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Users\\Sebastian\\AppData\\Local\\Python\\bin"
         - "C:\\Users\\Sebastian\\AppData\\Local\\GitHubDesktop\\bin"
         - "C:\\Users\\Sebastian\\.dotnet\\tools"
         - "C:\\Users\\Sebastian\\AppData\\Local\\Muse Hub\\lib"
+        - "C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\vcpkg"
       CMAKE_FIND_ROOT_PATH: "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug;C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows"
   -
     kind: "find-v1"
@@ -391,6 +436,7 @@ events:
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/AppData/Local/GitHubDesktop/bin/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/.dotnet/tools/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/AppData/Local/Muse Hub/lib/"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Windows/System32/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Windows/"
@@ -410,6 +456,7 @@ events:
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/AppData/Local/GitHubDesktop/bin/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/.dotnet/tools/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/AppData/Local/Muse Hub/lib/"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/"
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
       - "C:/Windows/System32/"
       - "C:/Windows/"
@@ -429,6 +476,7 @@ events:
       - "C:/Users/Sebastian/AppData/Local/GitHubDesktop/bin/"
       - "C:/Users/Sebastian/.dotnet/tools/"
       - "C:/Users/Sebastian/AppData/Local/Muse Hub/lib/"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/"
     searched_directories:
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lld-link.com"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lld-link.exe"
@@ -487,6 +535,9 @@ events:
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/AppData/Local/Muse Hub/lib/lld-link.com"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/AppData/Local/Muse Hub/lib/lld-link.exe"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/AppData/Local/Muse Hub/lib/lld-link"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/lld-link.com"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/lld-link.exe"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/lld-link"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lld-link.com"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lld-link.exe"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lld-link"
@@ -544,6 +595,9 @@ events:
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/AppData/Local/Muse Hub/lib/lld-link.com"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/AppData/Local/Muse Hub/lib/lld-link.exe"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/AppData/Local/Muse Hub/lib/lld-link"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/lld-link.com"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/lld-link.exe"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/lld-link"
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lld-link.com"
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lld-link.exe"
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lld-link"
@@ -601,6 +655,9 @@ events:
       - "C:/Users/Sebastian/AppData/Local/Muse Hub/lib/lld-link.com"
       - "C:/Users/Sebastian/AppData/Local/Muse Hub/lib/lld-link.exe"
       - "C:/Users/Sebastian/AppData/Local/Muse Hub/lib/lld-link"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/lld-link.com"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/lld-link.exe"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/lld-link"
     found: false
     search_context:
       CMAKE_PROGRAM_PATH:
@@ -626,12 +683,30 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Muse Hub\\lib"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Muse Hub\\lib"
         - "C:\\Users\\Sebastian\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\Sebastian\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Users\\Sebastian\\AppData\\Local\\Python\\bin"
         - "C:\\Users\\Sebastian\\AppData\\Local\\GitHubDesktop\\bin"
         - "C:\\Users\\Sebastian\\.dotnet\\tools"
         - "C:\\Users\\Sebastian\\AppData\\Local\\Muse Hub\\lib"
+        - "C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\vcpkg"
       CMAKE_FIND_ROOT_PATH: "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug;C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows"
   -
     kind: "find-v1"
@@ -672,6 +747,7 @@ events:
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/AppData/Local/GitHubDesktop/bin/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/.dotnet/tools/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/AppData/Local/Muse Hub/lib/"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Windows/System32/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Windows/"
@@ -691,6 +767,7 @@ events:
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/AppData/Local/GitHubDesktop/bin/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/.dotnet/tools/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/AppData/Local/Muse Hub/lib/"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/"
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
       - "C:/Windows/System32/"
       - "C:/Windows/"
@@ -710,6 +787,7 @@ events:
       - "C:/Users/Sebastian/AppData/Local/GitHubDesktop/bin/"
       - "C:/Users/Sebastian/.dotnet/tools/"
       - "C:/Users/Sebastian/AppData/Local/Muse Hub/lib/"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/"
     searched_directories:
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/link.com"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/link.exe"
@@ -768,6 +846,9 @@ events:
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/AppData/Local/Muse Hub/lib/link.com"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/AppData/Local/Muse Hub/lib/link.exe"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/AppData/Local/Muse Hub/lib/link"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/link.com"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/link.exe"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/link"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/link.com"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/link.exe"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/link"
@@ -825,6 +906,9 @@ events:
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/AppData/Local/Muse Hub/lib/link.com"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/AppData/Local/Muse Hub/lib/link.exe"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/AppData/Local/Muse Hub/lib/link"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/link.com"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/link.exe"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/link"
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/link.com"
     found: "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/link.exe"
     search_context:
@@ -851,12 +935,30 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Muse Hub\\lib"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Muse Hub\\lib"
         - "C:\\Users\\Sebastian\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\Sebastian\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Users\\Sebastian\\AppData\\Local\\Python\\bin"
         - "C:\\Users\\Sebastian\\AppData\\Local\\GitHubDesktop\\bin"
         - "C:\\Users\\Sebastian\\.dotnet\\tools"
         - "C:\\Users\\Sebastian\\AppData\\Local\\Muse Hub\\lib"
+        - "C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\vcpkg"
       CMAKE_FIND_ROOT_PATH: "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug;C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows"
   -
     kind: "find-v1"
@@ -897,6 +999,7 @@ events:
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/AppData/Local/GitHubDesktop/bin/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/.dotnet/tools/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/AppData/Local/Muse Hub/lib/"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Windows/System32/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Windows/"
@@ -916,6 +1019,7 @@ events:
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/AppData/Local/GitHubDesktop/bin/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/.dotnet/tools/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/AppData/Local/Muse Hub/lib/"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/"
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
       - "C:/Windows/System32/"
       - "C:/Windows/"
@@ -935,6 +1039,7 @@ events:
       - "C:/Users/Sebastian/AppData/Local/GitHubDesktop/bin/"
       - "C:/Users/Sebastian/.dotnet/tools/"
       - "C:/Users/Sebastian/AppData/Local/Muse Hub/lib/"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/"
     searched_directories:
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/mt.com"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/mt.exe"
@@ -993,6 +1098,9 @@ events:
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/AppData/Local/Muse Hub/lib/mt.com"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/AppData/Local/Muse Hub/lib/mt.exe"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/AppData/Local/Muse Hub/lib/mt"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/mt.com"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/mt.exe"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/mt"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/mt.com"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/mt.exe"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/mt"
@@ -1050,6 +1158,9 @@ events:
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/AppData/Local/Muse Hub/lib/mt.com"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/AppData/Local/Muse Hub/lib/mt.exe"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/AppData/Local/Muse Hub/lib/mt"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/mt.com"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/mt.exe"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/mt"
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/mt.com"
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/mt.exe"
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/mt"
@@ -1107,6 +1218,9 @@ events:
       - "C:/Users/Sebastian/AppData/Local/Muse Hub/lib/mt.com"
       - "C:/Users/Sebastian/AppData/Local/Muse Hub/lib/mt.exe"
       - "C:/Users/Sebastian/AppData/Local/Muse Hub/lib/mt"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/mt.com"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/mt.exe"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/mt"
     found: false
     search_context:
       CMAKE_PROGRAM_PATH:
@@ -1132,12 +1246,30 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Muse Hub\\lib"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Muse Hub\\lib"
         - "C:\\Users\\Sebastian\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\Sebastian\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Users\\Sebastian\\AppData\\Local\\Python\\bin"
         - "C:\\Users\\Sebastian\\AppData\\Local\\GitHubDesktop\\bin"
         - "C:\\Users\\Sebastian\\.dotnet\\tools"
         - "C:\\Users\\Sebastian\\AppData\\Local\\Muse Hub\\lib"
+        - "C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\vcpkg"
       CMAKE_FIND_ROOT_PATH: "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug;C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows"
   -
     kind: "find-v1"
@@ -1178,6 +1310,7 @@ events:
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/AppData/Local/GitHubDesktop/bin/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/.dotnet/tools/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/AppData/Local/Muse Hub/lib/"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Windows/System32/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Windows/"
@@ -1197,6 +1330,7 @@ events:
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/AppData/Local/GitHubDesktop/bin/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/.dotnet/tools/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/AppData/Local/Muse Hub/lib/"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/"
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
       - "C:/Windows/System32/"
       - "C:/Windows/"
@@ -1216,6 +1350,7 @@ events:
       - "C:/Users/Sebastian/AppData/Local/GitHubDesktop/bin/"
       - "C:/Users/Sebastian/.dotnet/tools/"
       - "C:/Users/Sebastian/AppData/Local/Muse Hub/lib/"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/"
     searched_directories:
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lib.com"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lib.exe"
@@ -1274,6 +1409,9 @@ events:
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/AppData/Local/Muse Hub/lib/lib.com"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/AppData/Local/Muse Hub/lib/lib.exe"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/AppData/Local/Muse Hub/lib/lib"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/lib.com"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/lib.exe"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/lib"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lib.com"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lib.exe"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lib"
@@ -1331,6 +1469,9 @@ events:
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/AppData/Local/Muse Hub/lib/lib.com"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/AppData/Local/Muse Hub/lib/lib.exe"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/AppData/Local/Muse Hub/lib/lib"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/lib.com"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/lib.exe"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/lib"
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lib.com"
     found: "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lib.exe"
     search_context:
@@ -1357,12 +1498,30 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Muse Hub\\lib"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Muse Hub\\lib"
         - "C:\\Users\\Sebastian\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\Sebastian\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Users\\Sebastian\\AppData\\Local\\Python\\bin"
         - "C:\\Users\\Sebastian\\AppData\\Local\\GitHubDesktop\\bin"
         - "C:\\Users\\Sebastian\\.dotnet\\tools"
         - "C:\\Users\\Sebastian\\AppData\\Local\\Muse Hub\\lib"
+        - "C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\vcpkg"
       CMAKE_FIND_ROOT_PATH: "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug;C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows"
   -
     kind: "find-v1"
@@ -1411,12 +1570,30 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Muse Hub\\lib"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Muse Hub\\lib"
         - "C:\\Users\\Sebastian\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\Sebastian\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Users\\Sebastian\\AppData\\Local\\Python\\bin"
         - "C:\\Users\\Sebastian\\AppData\\Local\\GitHubDesktop\\bin"
         - "C:\\Users\\Sebastian\\.dotnet\\tools"
         - "C:\\Users\\Sebastian\\AppData\\Local\\Muse Hub\\lib"
+        - "C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\vcpkg"
       CMAKE_FIND_ROOT_PATH: "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug;C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows"
   -
     kind: "message-v1"
@@ -1434,7 +1611,7 @@ events:
       The output was:
       0
       MSBuild version 18.6.3+84d3e95b4 for .NET Framework
-      Build started 10/07/2026 14:24:43.
+      Build started 13/07/2026 12:19:16.
       
       Project "C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\4.3.3\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
       PrepareForBuild:
@@ -1469,7 +1646,7 @@ events:
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:00.55
+      Time Elapsed 00:00:00.61
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -1520,6 +1697,7 @@ events:
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/AppData/Local/GitHubDesktop/bin/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/.dotnet/tools/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/AppData/Local/Muse Hub/lib/"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Windows/System32/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Windows/"
@@ -1539,6 +1717,7 @@ events:
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/AppData/Local/GitHubDesktop/bin/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/.dotnet/tools/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/AppData/Local/Muse Hub/lib/"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/"
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
       - "C:/Windows/System32/"
       - "C:/Windows/"
@@ -1558,6 +1737,7 @@ events:
       - "C:/Users/Sebastian/AppData/Local/GitHubDesktop/bin/"
       - "C:/Users/Sebastian/.dotnet/tools/"
       - "C:/Users/Sebastian/AppData/Local/Muse Hub/lib/"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/"
     searched_directories:
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lld-link.com"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lld-link.exe"
@@ -1616,6 +1796,9 @@ events:
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/AppData/Local/Muse Hub/lib/lld-link.com"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/AppData/Local/Muse Hub/lib/lld-link.exe"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/AppData/Local/Muse Hub/lib/lld-link"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/lld-link.com"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/lld-link.exe"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/lld-link"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lld-link.com"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lld-link.exe"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lld-link"
@@ -1673,6 +1856,9 @@ events:
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/AppData/Local/Muse Hub/lib/lld-link.com"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/AppData/Local/Muse Hub/lib/lld-link.exe"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/AppData/Local/Muse Hub/lib/lld-link"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/lld-link.com"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/lld-link.exe"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/lld-link"
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lld-link.com"
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lld-link.exe"
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lld-link"
@@ -1730,6 +1916,9 @@ events:
       - "C:/Users/Sebastian/AppData/Local/Muse Hub/lib/lld-link.com"
       - "C:/Users/Sebastian/AppData/Local/Muse Hub/lib/lld-link.exe"
       - "C:/Users/Sebastian/AppData/Local/Muse Hub/lib/lld-link"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/lld-link.com"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/lld-link.exe"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/lld-link"
     found: false
     search_context:
       CMAKE_PROGRAM_PATH:
@@ -1755,12 +1944,30 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Muse Hub\\lib"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Muse Hub\\lib"
         - "C:\\Users\\Sebastian\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\Sebastian\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Users\\Sebastian\\AppData\\Local\\Python\\bin"
         - "C:\\Users\\Sebastian\\AppData\\Local\\GitHubDesktop\\bin"
         - "C:\\Users\\Sebastian\\.dotnet\\tools"
         - "C:\\Users\\Sebastian\\AppData\\Local\\Muse Hub\\lib"
+        - "C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\vcpkg"
       CMAKE_FIND_ROOT_PATH: "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug;C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows"
   -
     kind: "find-v1"
@@ -1810,6 +2017,7 @@ events:
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/AppData/Local/GitHubDesktop/bin/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/.dotnet/tools/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/AppData/Local/Muse Hub/lib/"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Program Files/bin/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Program Files/sbin/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Program Files/"
@@ -1847,6 +2055,7 @@ events:
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/AppData/Local/GitHubDesktop/bin/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/.dotnet/tools/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/AppData/Local/Muse Hub/lib/"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Program Files/bin/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Program Files/sbin/"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Program Files/"
@@ -1884,6 +2093,7 @@ events:
       - "C:/Users/Sebastian/AppData/Local/GitHubDesktop/bin/"
       - "C:/Users/Sebastian/.dotnet/tools/"
       - "C:/Users/Sebastian/AppData/Local/Muse Hub/lib/"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/"
       - "C:/Program Files/bin/"
       - "C:/Program Files/sbin/"
       - "C:/Program Files/"
@@ -1972,6 +2182,9 @@ events:
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/AppData/Local/Muse Hub/lib/rc.com"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/AppData/Local/Muse Hub/lib/rc.exe"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/AppData/Local/Muse Hub/lib/rc"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/rc.com"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/rc.exe"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/rc"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Program Files/bin/rc.com"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Program Files/bin/rc.exe"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/debug/Program Files/bin/rc"
@@ -2083,6 +2296,9 @@ events:
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/AppData/Local/Muse Hub/lib/rc.com"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/AppData/Local/Muse Hub/lib/rc.exe"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/AppData/Local/Muse Hub/lib/rc"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/rc.com"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/rc.exe"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/rc"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Program Files/bin/rc.com"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Program Files/bin/rc.exe"
       - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/installed/x64-windows/Program Files/bin/rc"
@@ -2194,6 +2410,9 @@ events:
       - "C:/Users/Sebastian/AppData/Local/Muse Hub/lib/rc.com"
       - "C:/Users/Sebastian/AppData/Local/Muse Hub/lib/rc.exe"
       - "C:/Users/Sebastian/AppData/Local/Muse Hub/lib/rc"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/rc.com"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/rc.exe"
+      - "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/vcpkg/rc"
       - "C:/Program Files/bin/rc.com"
       - "C:/Program Files/bin/rc.exe"
       - "C:/Program Files/bin/rc"
@@ -2255,12 +2474,30 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Muse Hub\\lib"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Muse Hub\\lib"
         - "C:\\Users\\Sebastian\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\Sebastian\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Users\\Sebastian\\AppData\\Local\\Python\\bin"
         - "C:\\Users\\Sebastian\\AppData\\Local\\GitHubDesktop\\bin"
         - "C:\\Users\\Sebastian\\.dotnet\\tools"
         - "C:\\Users\\Sebastian\\AppData\\Local\\Muse Hub\\lib"
+        - "C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\vcpkg"
       CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/CHIP8Emulator"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
@@ -2277,8 +2514,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/CMakeScratch/TryCompile-eshkxx"
-      binary: "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/CMakeScratch/TryCompile-eshkxx"
+      source: "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/CMakeScratch/TryCompile-kpdf65"
+      binary: "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/CMakeScratch/TryCompile-kpdf65"
     cmakeVariables:
       CMAKE_CXX_STDLIB_MODULES_JSON: ""
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
@@ -2292,39 +2529,39 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/CMakeScratch/TryCompile-eshkxx'
+        Change Dir: 'C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/CMakeScratch/TryCompile-kpdf65'
         
-        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_15a4c.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_9a788.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
         MSBuild version 18.6.3+84d3e95b4 for .NET Framework
-        Build started 10/07/2026 14:24:44.
+        Build started 13/07/2026 12:19:17.
         
-        Project "C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\CMakeScratch\\TryCompile-eshkxx\\cmTC_15a4c.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kpdf65\\cmTC_9a788.vcxproj" on node 1 (default targets).
         PrepareForBuild:
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\CMakeScratch\\TryCompile-eshkxx\\Debug\\".
-          Creating directory "cmTC_15a4c.dir\\Debug\\cmTC_15a4c.tlog\\".
+          Creating directory "C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kpdf65\\Debug\\".
+          Creating directory "cmTC_9a788.dir\\Debug\\cmTC_9a788.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_15a4c.dir\\Debug\\cmTC_15a4c.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_15a4c.dir\\Debug\\cmTC_15a4c.tlog\\unsuccessfulbuild".
+          Creating "cmTC_9a788.dir\\Debug\\cmTC_9a788.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_9a788.dir\\Debug\\cmTC_9a788.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_15a4c.dir\\Debug\\\\" /Fd"cmTC_15a4c.dir\\Debug\\vc145.pdb" /external:W3 /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c"
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_9a788.dir\\Debug\\\\" /Fd"cmTC_9a788.dir\\Debug\\vc145.pdb" /external:W3 /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.51.36246 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_15a4c.dir\\Debug\\\\" /Fd"cmTC_15a4c.dir\\Debug\\vc145.pdb" /external:W3 /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_9a788.dir\\Debug\\\\" /Fd"cmTC_9a788.dir\\Debug\\vc145.pdb" /external:W3 /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c"
           CMakeCCompilerABI.c
         Link:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\CMakeScratch\\TryCompile-eshkxx\\Debug\\cmTC_15a4c.exe" /INCREMENTAL /ILK:"cmTC_15a4c.dir\\Debug\\cmTC_15a4c.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/CMakeScratch/TryCompile-eshkxx/Debug/cmTC_15a4c.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/CMakeScratch/TryCompile-eshkxx/Debug/cmTC_15a4c.lib" /MACHINE:X64  /machine:x64 cmTC_15a4c.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_15a4c.vcxproj -> C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\CMakeScratch\\TryCompile-eshkxx\\Debug\\cmTC_15a4c.exe
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kpdf65\\Debug\\cmTC_9a788.exe" /INCREMENTAL /ILK:"cmTC_9a788.dir\\Debug\\cmTC_9a788.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/CMakeScratch/TryCompile-kpdf65/Debug/cmTC_9a788.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/CMakeScratch/TryCompile-kpdf65/Debug/cmTC_9a788.lib" /MACHINE:X64  /machine:x64 cmTC_9a788.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_9a788.vcxproj -> C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kpdf65\\Debug\\cmTC_9a788.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_15a4c.dir\\Debug\\cmTC_15a4c.tlog\\unsuccessfulbuild".
-          Touching "cmTC_15a4c.dir\\Debug\\cmTC_15a4c.tlog\\cmTC_15a4c.lastbuildstate".
-        Done Building Project "C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\CMakeScratch\\TryCompile-eshkxx\\cmTC_15a4c.vcxproj" (default targets).
+          Deleting file "cmTC_9a788.dir\\Debug\\cmTC_9a788.tlog\\unsuccessfulbuild".
+          Touching "cmTC_9a788.dir\\Debug\\cmTC_9a788.tlog\\cmTC_9a788.lastbuildstate".
+        Done Building Project "C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kpdf65\\cmTC_9a788.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:00.39
+        Time Elapsed 00:00:00.41
         
       exitCode: 0
   -
@@ -2364,8 +2601,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/CMakeScratch/TryCompile-hrunny"
-      binary: "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/CMakeScratch/TryCompile-hrunny"
+      source: "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/CMakeScratch/TryCompile-kjbj4t"
+      binary: "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/CMakeScratch/TryCompile-kjbj4t"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -2380,39 +2617,39 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/CMakeScratch/TryCompile-hrunny'
+        Change Dir: 'C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/CMakeScratch/TryCompile-kjbj4t'
         
-        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_15753.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_d6467.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
         MSBuild version 18.6.3+84d3e95b4 for .NET Framework
-        Build started 10/07/2026 14:24:45.
+        Build started 13/07/2026 12:19:17.
         
-        Project "C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\CMakeScratch\\TryCompile-hrunny\\cmTC_15753.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kjbj4t\\cmTC_d6467.vcxproj" on node 1 (default targets).
         PrepareForBuild:
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\CMakeScratch\\TryCompile-hrunny\\Debug\\".
-          Creating directory "cmTC_15753.dir\\Debug\\cmTC_15753.tlog\\".
+          Creating directory "C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kjbj4t\\Debug\\".
+          Creating directory "cmTC_d6467.dir\\Debug\\cmTC_d6467.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_15753.dir\\Debug\\cmTC_15753.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_15753.dir\\Debug\\cmTC_15753.tlog\\unsuccessfulbuild".
+          Creating "cmTC_d6467.dir\\Debug\\cmTC_d6467.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_d6467.dir\\Debug\\cmTC_d6467.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_15753.dir\\Debug\\\\" /Fd"cmTC_15753.dir\\Debug\\vc145.pdb" /external:W3 /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp"
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_d6467.dir\\Debug\\\\" /Fd"cmTC_d6467.dir\\Debug\\vc145.pdb" /external:W3 /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.51.36246 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_15753.dir\\Debug\\\\" /Fd"cmTC_15753.dir\\Debug\\vc145.pdb" /external:W3 /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_d6467.dir\\Debug\\\\" /Fd"cmTC_d6467.dir\\Debug\\vc145.pdb" /external:W3 /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp"
           CMakeCXXCompilerABI.cpp
         Link:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\CMakeScratch\\TryCompile-hrunny\\Debug\\cmTC_15753.exe" /INCREMENTAL /ILK:"cmTC_15753.dir\\Debug\\cmTC_15753.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/CMakeScratch/TryCompile-hrunny/Debug/cmTC_15753.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/CMakeScratch/TryCompile-hrunny/Debug/cmTC_15753.lib" /MACHINE:X64  /machine:x64 cmTC_15753.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_15753.vcxproj -> C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\CMakeScratch\\TryCompile-hrunny\\Debug\\cmTC_15753.exe
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kjbj4t\\Debug\\cmTC_d6467.exe" /INCREMENTAL /ILK:"cmTC_d6467.dir\\Debug\\cmTC_d6467.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/CMakeScratch/TryCompile-kjbj4t/Debug/cmTC_d6467.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/CMakeScratch/TryCompile-kjbj4t/Debug/cmTC_d6467.lib" /MACHINE:X64  /machine:x64 cmTC_d6467.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_d6467.vcxproj -> C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kjbj4t\\Debug\\cmTC_d6467.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_15753.dir\\Debug\\cmTC_15753.tlog\\unsuccessfulbuild".
-          Touching "cmTC_15753.dir\\Debug\\cmTC_15753.tlog\\cmTC_15753.lastbuildstate".
-        Done Building Project "C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\CMakeScratch\\TryCompile-hrunny\\cmTC_15753.vcxproj" (default targets).
+          Deleting file "cmTC_d6467.dir\\Debug\\cmTC_d6467.tlog\\unsuccessfulbuild".
+          Touching "cmTC_d6467.dir\\Debug\\cmTC_d6467.tlog\\cmTC_d6467.lastbuildstate".
+        Done Building Project "C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kjbj4t\\cmTC_d6467.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:00.38
+        Time Elapsed 00:00:00.43
         
       exitCode: 0
   -
@@ -2583,12 +2820,30 @@ events:
         - "C:\\Program Files\\Git\\cmd"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Muse Hub\\lib"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Muse Hub\\lib"
         - "C:\\Users\\Sebastian\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\Sebastian\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Users\\Sebastian\\AppData\\Local\\Python\\bin"
         - "C:\\Users\\Sebastian\\AppData\\Local\\GitHubDesktop\\bin"
         - "C:\\Users\\Sebastian\\.dotnet\\tools"
         - "C:\\Users\\Sebastian\\AppData\\Local\\Muse Hub\\lib"
+        - "C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\vcpkg"
       CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/CHIP8Emulator"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"

@@ -1,6 +1,19 @@
 #include "CPU.cpp"
+#include <SDL.h>
+
+// references:
+// https://www.libsdl.org/release/SDL-1.2.15/docs/html/guidebasicsinit.html
+// 
+// 
 
 int main(int argc, char*argv[]){
+    // define SDL video and audio
+    if((SDL_Init(SDL_INIT_VIDEO|SDL_INIT_AUDIO)) <= -1){
+        // display error message if initialisation fails
+        std::cerr << "ERROR:\t failed to initialise SDL" << std::endl; 
+        return 1;
+    }
+
     // Cycles per frame:
     const int CYCLES_PER_FRAME = 500 / 60;
     // creates CPU class for emulator
@@ -20,6 +33,7 @@ int main(int argc, char*argv[]){
         return 1;
     }
     bool running = true;
+    std::cout<< "Loading ROM:" << std::endl;
     while(running){
         // perform the FDE cycle
         for(int i = 0; i < CYCLES_PER_FRAME; i++){
