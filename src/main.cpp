@@ -1,5 +1,6 @@
 #include "CPU.cpp"
 #include <SDL.h>
+#include <stdint.h>
 
 // references:
 // https://www.libsdl.org/release/SDL-1.2.15/docs/html/guidebasicsinit.html
@@ -7,8 +8,8 @@
 // https://wiki.libsdl.org/SDL2/SDL_EventType
 // https://lazyfoo.net/tutorials/SDL/07_texture_loading_and_rendering/index.php
 // https://thenumb.at/cpp-course/sdl2/05/05.html
-// 
-// 
+// https://wiki.libsdl.org/SDL2/SDL_UpdateTexture
+// https://wiki.libsdl.org/SDL2/SDL_RenderCopy
 // 
 // 
 // 
@@ -17,7 +18,18 @@
 
 // display the screen 
 void display (SDL_Renderer *renderer, SDL_Texture *texture, CPU &chip8){
+    // update the texture
+    SDL_UpdateTexture(texture,NULL,chip8.get_Display(),
+        64* sizeof(uint32_t));
+    
+    // clear the renderer
+    SDL_RenderClear(renderer);
 
+    // Copy the texture onto the renderer
+    SDL_RenderCopy(renderer,texture,NULL,NULL);
+    
+    // present final frame
+    SDL_RenderPresent(renderer);
 }
 
 
@@ -56,7 +68,7 @@ int main(int argc, char*argv[]){
     }
 
     // get texture from renderer
-    SDL_Texture *texture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_STATIC, 64,32);
+    SDL_Texture *texture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_STREAMING, 64,32);
 
     // check if texture has been created:
     if(!texture){
@@ -107,6 +119,7 @@ int main(int argc, char*argv[]){
         chip8.tick_timers();
 
         // render display
+        display(renderer, texture, chip8);
     }
 
     
