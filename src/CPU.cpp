@@ -145,6 +145,9 @@ class CPU{
             // copy font set to memory starting at postion 0x50
             memcpy(&this->memory[0x50], this->fontset, sizeof(this->fontset));
         }
+        uint8_t get_sound_timer() const{
+            return this->sound_timer;
+        }
         // load ROM to the emulator
         bool load_ROM(const char* path){
             // read the file and format it to binary at the end position

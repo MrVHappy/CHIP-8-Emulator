@@ -55,6 +55,19 @@ void display (SDL_Renderer *renderer, SDL_Texture *texture, CPU &chip8){
     SDL_RenderPresent(renderer);
 }
 
+void play_sound(CPU &chip8, SDL_AudioDeviceID &audio){
+
+    int16_t audio_buffer[8192];
+
+    if(chip8.get_sound_timer() > 0){
+        //play sound
+        SDL_PauseAudioDevice(audio,0);
+    }
+    else{
+        // stop playing sound
+        SDL_PauseAudioDevice(audio,1);
+    }
+}
 
 int main(int argc, char*argv[]){
     // define SDL video and audio
@@ -111,7 +124,28 @@ int main(int argc, char*argv[]){
         SDL_Quit();
         return 1;
     }
+    // audio spec configuration
+    SDL_AudioSpec audio_spec;
+    audio_spec.freq = 44100;
+    audio_spec.format = AUDIO_S16;
+    audio_spec.channels = 1;
+    audio_spec.samples = 8192;
+    audio_spec.callback = NULL;
+
+    SDL_AudioDeviceID audio = SDL_OpenAudioDevice(NULL,0,&audio_spec,NULL,0);
     
+    if (audio == 0){
+        // display error message
+        std::cerr << "ERROR:\t failed to create audio" << std::endl;
+        // End application
+        system("pause");
+        SDL_DestroyTexture(texture);
+        SDL_DestroyRenderer(renderer);
+        SDL_DestroyWindow(window);
+        SDL_Quit();
+        return 1;
+    }
+    SDL_PauseAudioDevice(audio,0);
     // Cycles per frame:
     const int CYCLES_PER_FRAME = 500 / 60;
     // creates CPU class for emulator
@@ -135,6 +169,7 @@ int main(int argc, char*argv[]){
         SDL_DestroyTexture(texture);
         SDL_DestroyRenderer(renderer);
         SDL_DestroyWindow(window);
+        SDL_CloseAudioDevice(audio);
         SDL_Quit();
         return 1;
     }
@@ -173,12 +208,15 @@ int main(int argc, char*argv[]){
         // render display
         display(renderer, texture, chip8);
 
+        // play sound
+        play_sound(chip8,audio);
         // set the cycle delay to 17ms
         SDL_Delay(17); 
     }
     SDL_DestroyTexture(texture);
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
+    SDL_CloseAudioDevice(audio);
     SDL_Quit();
     
     return 0;

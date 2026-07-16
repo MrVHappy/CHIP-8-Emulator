@@ -96,7 +96,7 @@ events:
       The output was:
       0
       MSBuild version 18.6.3+84d3e95b4 for .NET Framework
-      Build started 16/07/2026 14:00:59.
+      Build started 16/07/2026 14:47:14.
       
       Project "C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\4.3.3\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
       PrepareForBuild:
@@ -131,7 +131,7 @@ events:
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:00.79
+      Time Elapsed 00:00:00.81
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -1611,7 +1611,7 @@ events:
       The output was:
       0
       MSBuild version 18.6.3+84d3e95b4 for .NET Framework
-      Build started 16/07/2026 14:01:00.
+      Build started 16/07/2026 14:47:15.
       
       Project "C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\4.3.3\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
       PrepareForBuild:
@@ -1646,7 +1646,7 @@ events:
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:00.50
+      Time Elapsed 00:00:00.60
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -2514,8 +2514,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/CMakeScratch/TryCompile-fds6dz"
-      binary: "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/CMakeScratch/TryCompile-fds6dz"
+      source: "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/CMakeScratch/TryCompile-7q8w4s"
+      binary: "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/CMakeScratch/TryCompile-7q8w4s"
     cmakeVariables:
       CMAKE_CXX_STDLIB_MODULES_JSON: ""
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
@@ -2529,39 +2529,39 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/CMakeScratch/TryCompile-fds6dz'
+        Change Dir: 'C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/CMakeScratch/TryCompile-7q8w4s'
         
-        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_cffbb.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_b3d2a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
         MSBuild version 18.6.3+84d3e95b4 for .NET Framework
-        Build started 16/07/2026 14:01:01.
+        Build started 16/07/2026 14:47:16.
         
-        Project "C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\CMakeScratch\\TryCompile-fds6dz\\cmTC_cffbb.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7q8w4s\\cmTC_b3d2a.vcxproj" on node 1 (default targets).
         PrepareForBuild:
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\CMakeScratch\\TryCompile-fds6dz\\Debug\\".
-          Creating directory "cmTC_cffbb.dir\\Debug\\cmTC_cffbb.tlog\\".
+          Creating directory "C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7q8w4s\\Debug\\".
+          Creating directory "cmTC_b3d2a.dir\\Debug\\cmTC_b3d2a.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_cffbb.dir\\Debug\\cmTC_cffbb.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_cffbb.dir\\Debug\\cmTC_cffbb.tlog\\unsuccessfulbuild".
+          Creating "cmTC_b3d2a.dir\\Debug\\cmTC_b3d2a.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_b3d2a.dir\\Debug\\cmTC_b3d2a.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_cffbb.dir\\Debug\\\\" /Fd"cmTC_cffbb.dir\\Debug\\vc145.pdb" /external:W3 /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c"
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_b3d2a.dir\\Debug\\\\" /Fd"cmTC_b3d2a.dir\\Debug\\vc145.pdb" /external:W3 /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.51.36246 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_cffbb.dir\\Debug\\\\" /Fd"cmTC_cffbb.dir\\Debug\\vc145.pdb" /external:W3 /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_b3d2a.dir\\Debug\\\\" /Fd"cmTC_b3d2a.dir\\Debug\\vc145.pdb" /external:W3 /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c"
           CMakeCCompilerABI.c
         Link:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\CMakeScratch\\TryCompile-fds6dz\\Debug\\cmTC_cffbb.exe" /INCREMENTAL /ILK:"cmTC_cffbb.dir\\Debug\\cmTC_cffbb.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/CMakeScratch/TryCompile-fds6dz/Debug/cmTC_cffbb.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/CMakeScratch/TryCompile-fds6dz/Debug/cmTC_cffbb.lib" /MACHINE:X64  /machine:x64 cmTC_cffbb.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_cffbb.vcxproj -> C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\CMakeScratch\\TryCompile-fds6dz\\Debug\\cmTC_cffbb.exe
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7q8w4s\\Debug\\cmTC_b3d2a.exe" /INCREMENTAL /ILK:"cmTC_b3d2a.dir\\Debug\\cmTC_b3d2a.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/CMakeScratch/TryCompile-7q8w4s/Debug/cmTC_b3d2a.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/CMakeScratch/TryCompile-7q8w4s/Debug/cmTC_b3d2a.lib" /MACHINE:X64  /machine:x64 cmTC_b3d2a.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_b3d2a.vcxproj -> C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7q8w4s\\Debug\\cmTC_b3d2a.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_cffbb.dir\\Debug\\cmTC_cffbb.tlog\\unsuccessfulbuild".
-          Touching "cmTC_cffbb.dir\\Debug\\cmTC_cffbb.tlog\\cmTC_cffbb.lastbuildstate".
-        Done Building Project "C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\CMakeScratch\\TryCompile-fds6dz\\cmTC_cffbb.vcxproj" (default targets).
+          Deleting file "cmTC_b3d2a.dir\\Debug\\cmTC_b3d2a.tlog\\unsuccessfulbuild".
+          Touching "cmTC_b3d2a.dir\\Debug\\cmTC_b3d2a.tlog\\cmTC_b3d2a.lastbuildstate".
+        Done Building Project "C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7q8w4s\\cmTC_b3d2a.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:00.42
+        Time Elapsed 00:00:00.39
         
       exitCode: 0
   -
@@ -2601,8 +2601,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/CMakeScratch/TryCompile-fxgh1v"
-      binary: "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/CMakeScratch/TryCompile-fxgh1v"
+      source: "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/CMakeScratch/TryCompile-n7f72q"
+      binary: "C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/CMakeScratch/TryCompile-n7f72q"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -2617,39 +2617,39 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/CMakeScratch/TryCompile-fxgh1v'
+        Change Dir: 'C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/CMakeScratch/TryCompile-n7f72q'
         
-        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_8f54c.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_e718e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
         MSBuild version 18.6.3+84d3e95b4 for .NET Framework
-        Build started 16/07/2026 14:01:02.
+        Build started 16/07/2026 14:47:17.
         
-        Project "C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\CMakeScratch\\TryCompile-fxgh1v\\cmTC_8f54c.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n7f72q\\cmTC_e718e.vcxproj" on node 1 (default targets).
         PrepareForBuild:
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\CMakeScratch\\TryCompile-fxgh1v\\Debug\\".
-          Creating directory "cmTC_8f54c.dir\\Debug\\cmTC_8f54c.tlog\\".
+          Creating directory "C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n7f72q\\Debug\\".
+          Creating directory "cmTC_e718e.dir\\Debug\\cmTC_e718e.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_8f54c.dir\\Debug\\cmTC_8f54c.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_8f54c.dir\\Debug\\cmTC_8f54c.tlog\\unsuccessfulbuild".
+          Creating "cmTC_e718e.dir\\Debug\\cmTC_e718e.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_e718e.dir\\Debug\\cmTC_e718e.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_8f54c.dir\\Debug\\\\" /Fd"cmTC_8f54c.dir\\Debug\\vc145.pdb" /external:W3 /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp"
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_e718e.dir\\Debug\\\\" /Fd"cmTC_e718e.dir\\Debug\\vc145.pdb" /external:W3 /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.51.36246 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_8f54c.dir\\Debug\\\\" /Fd"cmTC_8f54c.dir\\Debug\\vc145.pdb" /external:W3 /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_e718e.dir\\Debug\\\\" /Fd"cmTC_e718e.dir\\Debug\\vc145.pdb" /external:W3 /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp"
           CMakeCXXCompilerABI.cpp
         Link:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\CMakeScratch\\TryCompile-fxgh1v\\Debug\\cmTC_8f54c.exe" /INCREMENTAL /ILK:"cmTC_8f54c.dir\\Debug\\cmTC_8f54c.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/CMakeScratch/TryCompile-fxgh1v/Debug/cmTC_8f54c.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/CMakeScratch/TryCompile-fxgh1v/Debug/cmTC_8f54c.lib" /MACHINE:X64  /machine:x64 cmTC_8f54c.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_8f54c.vcxproj -> C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\CMakeScratch\\TryCompile-fxgh1v\\Debug\\cmTC_8f54c.exe
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n7f72q\\Debug\\cmTC_e718e.exe" /INCREMENTAL /ILK:"cmTC_e718e.dir\\Debug\\cmTC_e718e.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/CMakeScratch/TryCompile-n7f72q/Debug/cmTC_e718e.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/Sebastian/OneDrive/Documents/GitHub/CHIP 8 EMU/build/CMakeFiles/CMakeScratch/TryCompile-n7f72q/Debug/cmTC_e718e.lib" /MACHINE:X64  /machine:x64 cmTC_e718e.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_e718e.vcxproj -> C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n7f72q\\Debug\\cmTC_e718e.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_8f54c.dir\\Debug\\cmTC_8f54c.tlog\\unsuccessfulbuild".
-          Touching "cmTC_8f54c.dir\\Debug\\cmTC_8f54c.tlog\\cmTC_8f54c.lastbuildstate".
-        Done Building Project "C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\CMakeScratch\\TryCompile-fxgh1v\\cmTC_8f54c.vcxproj" (default targets).
+          Deleting file "cmTC_e718e.dir\\Debug\\cmTC_e718e.tlog\\unsuccessfulbuild".
+          Touching "cmTC_e718e.dir\\Debug\\cmTC_e718e.tlog\\cmTC_e718e.lastbuildstate".
+        Done Building Project "C:\\Users\\Sebastian\\OneDrive\\Documents\\GitHub\\CHIP 8 EMU\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n7f72q\\cmTC_e718e.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:00.39
+        Time Elapsed 00:00:00.40
         
       exitCode: 0
   -
