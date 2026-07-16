@@ -1,6 +1,7 @@
 #include "CPU.cpp"
 #include <SDL.h>
 #include <stdint.h>
+#include <map>
 
 // references:
 // https://www.libsdl.org/release/SDL-1.2.15/docs/html/guidebasicsinit.html
@@ -10,11 +11,33 @@
 // https://thenumb.at/cpp-course/sdl2/05/05.html
 // https://wiki.libsdl.org/SDL2/SDL_UpdateTexture
 // https://wiki.libsdl.org/SDL2/SDL_RenderCopy
+// https://freepascal-meets-sdl.net/sdl-2-0-key-code-lookup-table/
 // 
 // 
 // 
 // 
-// 
+
+// create a map for key inputs
+std::map<SDL_Keycode, uint8_t> key_map ={
+    {SDLK_1, 0x01}, // 1
+    {SDLK_2, 0x02}, // 2
+    {SDLK_3, 0x03}, // 3
+    {SDLK_4, 0x0C}, // C
+    {SDLK_q, 0x04}, // 4
+    {SDLK_w, 0x05}, // 5
+    {SDLK_e, 0x06}, // 6
+    {SDLK_r, 0x0D}, // D
+    {SDLK_a, 0x07}, // 7
+    {SDLK_s, 0x08}, // 8
+    {SDLK_d, 0x09}, // 9
+    {SDLK_f, 0x0E}, // E
+    {SDLK_z, 0x0A}, // A
+    {SDLK_x, 0x00}, // 0
+    {SDLK_c, 0x0B}, // B
+    {SDLK_v, 0x0F} // F
+
+};
+
 
 // display the screen 
 void display (SDL_Renderer *renderer, SDL_Texture *texture, CPU &chip8){
@@ -40,6 +63,7 @@ int main(int argc, char*argv[]){
         std::cerr << "ERROR:\t failed to initialise SDL" << std::endl;
         // End application
         system("pause");
+        SDL_Quit();
         return 1;
     }
     // create a window called "Chip 8 Emulator" @ 1280:720 displayed at the centre
@@ -52,6 +76,8 @@ int main(int argc, char*argv[]){
         std::cerr << "ERROR:\t window creation failed" << std::endl;
         // End application
         system("pause");
+        SDL_DestroyWindow(window);
+        SDL_Quit();
         return 1;
     }
 
@@ -64,6 +90,9 @@ int main(int argc, char*argv[]){
         std::cerr << "ERROR:\t failed to create renderer" << std::endl;
         // End application
         system("pause");
+        SDL_DestroyWindow(window);
+        SDL_DestroyRenderer(renderer);
+        SDL_Quit();
         return 1;
     }
 
@@ -76,6 +105,10 @@ int main(int argc, char*argv[]){
         std::cerr << "ERROR:\t failed to create texture" << std::endl;
         // End application
         system("pause");
+        SDL_DestroyTexture(texture);
+        SDL_DestroyRenderer(renderer);
+        SDL_DestroyWindow(window);
+        SDL_Quit();
         return 1;
     }
     
@@ -88,6 +121,10 @@ int main(int argc, char*argv[]){
         // load the ROM
         if(!chip8.load_ROM(argv[1])){
             std::cerr << "ERROR:\t failed to load ROM" << std::endl;
+            SDL_DestroyTexture(texture);
+            SDL_DestroyRenderer(renderer);
+            SDL_DestroyWindow(window);
+            SDL_Quit();
             return 1;
         }
     }
@@ -95,6 +132,10 @@ int main(int argc, char*argv[]){
         // display error message
         std::cerr << "No ROM preloaded" << std::endl;
         // TEMP
+        SDL_DestroyTexture(texture);
+        SDL_DestroyRenderer(renderer);
+        SDL_DestroyWindow(window);
+        SDL_Quit();
         return 1;
     }
     bool running = true;
@@ -106,9 +147,20 @@ int main(int argc, char*argv[]){
             // checks if the user has closed the window 
            if(event.type == SDL_QUIT){
                 // stop the application
-                running = false;
+                running = false;                
            }
-            
+           if(event.type == SDL_KEYDOWN){
+                // find key
+                if (auto key = key_map.find(event.key.keysym.sym); key != key_map.end()){
+                    chip8.set_key_press(key->second);
+                }
+           }
+           if(event.type == SDL_KEYUP){
+                // find key
+                if (auto key = key_map.find(event.key.keysym.sym); key != key_map.end()){
+                    chip8.set_key_release(key->second);
+                }
+           }
         }
         // perform the FDE cycle
         for(int i = 0; i < CYCLES_PER_FRAME; i++){
@@ -120,8 +172,14 @@ int main(int argc, char*argv[]){
 
         // render display
         display(renderer, texture, chip8);
-    }
 
+        // set the cycle delay to 17ms
+        SDL_Delay(17); 
+    }
+    SDL_DestroyTexture(texture);
+    SDL_DestroyRenderer(renderer);
+    SDL_DestroyWindow(window);
+    SDL_Quit();
     
     return 0;
 }

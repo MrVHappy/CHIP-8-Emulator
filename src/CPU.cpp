@@ -233,6 +233,22 @@ class CPU{
             return this->display;
         }
 
+        // set key press
+        void set_key_press(uint8_t key){
+            if(key > 15){
+                return;
+            }
+            this->keypad[key] = 1;
+        }
+
+        // set key release
+        void set_key_release(uint8_t key){
+            if(key > 15){
+                return;
+            }
+            this->keypad[key] = 0;
+        }
+
         // instruction set functions
         // 00E0
         void clear(){
