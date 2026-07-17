@@ -56,12 +56,29 @@ void display (SDL_Renderer *renderer, SDL_Texture *texture, CPU &chip8){
 }
 
 void play_sound(CPU &chip8, SDL_AudioDeviceID &audio){
-
+    int period = 44100 / 440;
     int16_t audio_buffer[8192];
+    int mid_point = period / 2;
+    const int HIGH = 3000;
+    const int LOW = -3000;
+    int queue_size = SDL_GetQueuedAudioSize(audio);
+    int samples_per_frame = 44100 / 60;
+
+    for(int i = 0; i < 8192; i++){
+        int sample_pos = i % period;
+        if(sample_pos < mid_point){
+            audio_buffer[i] = HIGH;
+        }
+        else{
+            audio_buffer[i] = LOW;
+        }
+    }
 
     if(chip8.get_sound_timer() > 0){
         //play sound
         SDL_PauseAudioDevice(audio,0);
+        if((samples_per_frame * sizeof(uint16_t)) > queue_size)
+            SDL_QueueAudio(audio,audio_buffer, sizeof(audio_buffer));
     }
     else{
         // stop playing sound
@@ -126,6 +143,10 @@ int main(int argc, char*argv[]){
     }
     // audio spec configuration
     SDL_AudioSpec audio_spec;
+    // zero initialise audio spec
+    SDL_zero(audio_spec);
+
+    // setting up audio spec fields
     audio_spec.freq = 44100;
     audio_spec.format = AUDIO_S16;
     audio_spec.channels = 1;
