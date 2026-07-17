@@ -95,9 +95,9 @@ class CPU{
             {0x000E, &CPU::exit_sub}, // 2
             {0x1000, &CPU::jump}, // 3
             {0x2000, &CPU::call_sub}, // 4
-            {0x3000, &CPU::not_equal_NN}, // 5
-            {0x4000, &CPU::equal_NN}, // 6
-            {0x5000, &CPU::VX_not_equal_VY}, // 7
+            {0x3000, &CPU::equal_NN}, // 5
+            {0x4000, &CPU::not_equal_NN}, // 6
+            {0x5000, &CPU::VX_equal_VY}, // 7
             {0x6000, &CPU::assign_VX}, // 8
             {0x7000, &CPU::increment_VX}, // 9
             {0x8000, &CPU::VX_copy_VY}, // 10
@@ -109,7 +109,7 @@ class CPU{
             {0x8006, &CPU::right_shift}, // 16
             {0x8007, &CPU::VX_VY_0_on_borrow}, // 17
             {0x800E, &CPU::left_shift}, // 18
-            {0x9000, &CPU::VX_EQUAL_VY}, // 19
+            {0x9000, &CPU::VX_not_equal_VY}, // 19
             {0xA000, &CPU::set_index}, // 20
             {0xB000, &CPU::jump_0_NNN}, // 21
             {0xC000, &CPU::rand_VX_VY}, // 22
@@ -282,21 +282,21 @@ class CPU{
             this->Program_Counter = this->opcode_nnn; 
         }
         // 3XNN
-        void not_equal_NN(){
-            // if the register X != to num then go to next instruction
-            if (this->V[this->opcode_x] != opcode_nn)
+        void equal_NN(){
+            // if the register X == to num then go to next instruction
+            if (this->V[this->opcode_x] == opcode_nn)
                 this->Program_Counter +=2;
         }
         // 4XNN
-        void equal_NN(){
-            // if the register X == to opcode_nn then go to next instruction
-            if (this->V[this->opcode_x] == opcode_nn)  
+        void not_equal_NN(){
+            // if the register X != to opcode_nn then go to next instruction
+            if (this->V[this->opcode_x] != opcode_nn)  
                 this->Program_Counter +=2;
         }
         // 5XY0
-        void VX_not_equal_VY(){
-            // if the register X != to register Y then go to next instruction
-            if (this->V[this->opcode_x] != this->V[this->opcode_y])
+        void VX_equal_VY(){
+            // if the register X == to register Y then go to next instruction
+            if (this->V[this->opcode_x] == this->V[this->opcode_y])
                 this->Program_Counter +=2;
         }
         // 6XNN
@@ -327,7 +327,11 @@ class CPU{
         void VX_VY_carry(){
             // add register X and Y
             uint16_t carry = this->V[this->opcode_x] + this->V[this->opcode_y];
-            // check if the sum is > 255
+            
+            // then assign register X to sum
+            this->V[this->opcode_x] = carry;
+
+            // and check if the sum is > 255
             if (carry > 255){
                 // add carry
                 this->V[0xF] = 1;
@@ -336,12 +340,13 @@ class CPU{
                 // don't add carry
                 this->V[0xF] = 0;
             }
-            // assign register X to sum
-            this->V[this->opcode_x] = carry;
         }
         // 8XY5
         void VX_VY_borrow(){
-            // check if register X is >= to register Y
+            // subtract register X by register Y
+            this->V[this->opcode_x] -= this->V[this->opcode_y];
+
+            // then check if register X is >= to register Y
             if (this->V[this->opcode_x] >= this->V[this->opcode_y]){
                 // add carry
                 this->V[0xF] = 1;
@@ -350,11 +355,12 @@ class CPU{
                 // don't add carry
                 this->V[0xF] = 0;
             }
-            // subtract register X by register Y
-            this->V[this->opcode_x] -= this->V[this->opcode_y];
         }
         // 8XY6
         void right_shift(){
+            // perform a right shift
+            this->V[this->opcode_x] = this->V[this->opcode_x] >> 1;
+
             // checks the least significant bit
             if(this->V[this->opcode_x] & (1 << 0)){
                 // set V[0xF] to 1
@@ -364,22 +370,23 @@ class CPU{
                 // set V[0xF] to 0
                 this->V[0xF] = 0;
             }
-            // then perform a right shift
-            this->V[this->opcode_x] = this->V[this->opcode_x] >> 1;
         }
         // 8XY7
         void VX_VY_0_on_borrow(){
-           if(this->V[this->opcode_x] <= this->V[this->opcode_y]){
+           this->V[this->opcode_x] = this->V[this->opcode_y] - this->V[this->opcode_x];
+
+            if(this->V[this->opcode_x] <= this->V[this->opcode_y]){
                 this->V[0xF] = 1;
            }
            else{
                 this->V[0xF] = 0;
            }
-
-           this->V[this->opcode_x] = this->V[this->opcode_y] - this->V[this->opcode_x];
         }
         // 8XYE
         void left_shift(){
+            // perform a left shift
+            this->V[this->opcode_x] = this->V[this->opcode_x] << 1;
+            
             // checks the most significant bit
             if(this->V[this->opcode_x] & (1 << 7)){
                 // set V[0xF] to 1
@@ -389,12 +396,10 @@ class CPU{
                 // set V[0xF] to 0
                 this->V[0xF] = 0;
             }
-            // then perform a left shift
-            this->V[this->opcode_x] = this->V[this->opcode_x] << 1;
         }
         // 9XY0
-        void VX_EQUAL_VY(){
-            if (this->V[this->opcode_x] == this-> V[this->opcode_y])
+        void VX_not_equal_VY(){
+            if (this->V[this->opcode_x] != this-> V[this->opcode_y])
                 this->Program_Counter +=2;
         }
         // ANNN
